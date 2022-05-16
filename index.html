@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/select.css">
+    <link rel="stylesheet" href="css/checkbox.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="contenedor-matricula-index">
+            <div class="contenedortitulo-matricula-index">
+                <div class="titulo-matricula-index">Matrícula</div>
+                <div class="subtitulo-matricula-index"><span>Este módulo sirve para configurar la matriculación
+                        automática de usuarios a determinado cursos.</span></div>
+            </div>
+            <div class="contenedorinput-matricula-index">
+                <form id="formulario" action="" method="POST" class="form_panel">
+                    <div class="groupinput-matricula-index">
+                        <div> <label class="numero-matricula-index">1.</label></div>
+                        <div class="select">
+                            <select name="curso" id="curso">
+                            </select>
+                            <span id="select_x">x</span>
+                        </div>
+                    </div>
+                    <div class="groupinput-matricula-index">
+                        <div> <label class="numero-matricula-index">2.</label></div>
+                        <div class="select">
+                            <select name="participantes" id="participantes">
+                            </select>
+                            <div class="select_arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mat_new_users">
+                        <label class="container-matricula-index">Matricular a los usuarios nuevos.
+                            <input id="new_users" type="checkbox">
+                            <span for="new_users" class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="recordatorios">
+                        <div>
+                            <label class="num">3.</label>
+                            <label>Recordatorios</label>
+                        </div>
+                        <div class="checkboxes ">
+                            <div class=""><label class="container-matricula-index">Todos los lunes
+                                    <input id="lunes" type="checkbox">
+                                    <span for="lunes" class="checkmark"></span>
+                                </label></div>
+                            <div class=""><label class="container-matricula-index">Todos los viernes
+                                    <input id="viernes" type="checkbox">
+                                    <span for="viernes" class="checkmark"></span>
+                                </label></div>
+                            <div class=""><label class="container-matricula-index">A tres días del cierre
+                                    <input id="tresdias" type="checkbox">
+                                    <span for="tresdias" class="checkmark"></span>
+                                </label></div>
+                            <div class=""><label class="container-matricula-index">Un día antes del cierre
+                                    <input id="undia" type="checkbox">
+                                    <span for="undia" class="checkmark"></span>
+                                </label></div>
+                        </div>
+
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="button" class="btnmatricula-index" id="btn_matricular">Matricular</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<style scoped>
+    @font-face {
+        font-family: MontserratB;
+        src: url(font/Montserrat-Bold.ttf);
+    }
+
+    @font-face {
+        font-family: MontserratL;
+        src: url(font/Montserrat-Light.ttf);
+    }
+
+    @font-face {
+        font-family: MontserratM;
+        src: url(font/Montserrat-Medium.ttf);
+    }
+
+    body {
+        margin: 0px;
+        font-family: MontserratM;
+    }
+
+    #app {
+
+        width: 100%;
+        height: 100%;
+        background: #F1F4F5;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    #app label {
+        margin-left: 10px;
+        color: #00395D;
+    }
+
+    .contenedor-matricula-index {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contenedortitulo-matricula-index {
+        text-align: center;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .titulo-matricula-index {
+        font-weight: bold;
+        font-size: 38px;
+        color: #00395D;
+        opacity: 1;
+        text-align: center;
+
+    }
+
+    .subtitulo-matricula-index {
+        color: #00395D;
+        opacity: 1;
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: 0px;
+        padding: 15px 10px;
+    }
+
+    .contenedorinput-matricula-index {
+        border-radius: 10px;
+        width: 80%;
+        height: max-content;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 9px;
+        opacity: 1;
+        padding: 50px 0px;
+        margin: auto;
+        min-width: 45%;
+        min-height: 25em;
+    }
+
+    .form_panel>div {
+        padding: 10px 20px;
+    }
+
+    .groupinput-matricula-index {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .numero-matricula-index {
+        font-size: 20px;
+        margin-left: 10px;
+        color: #00395D;
+    }
+
+    .mat_new_users {
+        font-size: 12px;
+        margin-left: 50px;
+        margin-top: 10px;
+        display: block !important;
+    }
+
+    .recordatorios {
+        margin-top: 35px;
+    }
+
+    div.checkboxes {
+        padding: 10px 66px;
+        font-size: 12px;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    div.checkboxes>div {
+        margin: 5px 0;
+
+    }
+
+    .btnmatricula-index {
+
+        background: #00395D 0% 0% no-repeat padding-box;
+        border-radius: 9px;
+        border: none;
+        padding: 6px 50px;
+        color: #FFFFFF;
+        opacity: 1;
+        font-size: 18px;
+        margin: auto;
+        letter-spacing: 1px;
+        font-family: 'Nunito', sans-serif;
+        cursor: pointer;
+    }
+
+    @media (max-width: 480px) {
+        .contenedor-matricula-index {
+        width: 100%;
+      
+    }
+    .contenedortitulo-matricula-index {
+        width: 80%;
+    
+    }
+    div.checkboxes {
+        grid-template-columns: auto;
+    }
+    .contenedorinput-matricula-index {
+        border-radius: 10px;
+        width: 80%;
+        height: max-content;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 9px;
+        opacity: 1;
+        padding: 50px 0px;
+        margin: auto;
+        min-width: 45%;
+        min-height: 25em;
+    }
+    }
+    @media (width: 768px) {
+        .contenedor-matricula-index {
+        width: 100%;
+      
+    }
+    .contenedortitulo-matricula-index {
+        width: 50%;
+    
+    }
+}
+</style>
